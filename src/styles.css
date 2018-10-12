@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+
+.bootstrap-select>.dropdown-menu {
+  max-height: 300px !important;
+}
+
+.bootstrap-select>.dropdown-menu>.dropdown-menu.inner {
+  max-height: 250px !important;
+}
+
+.bootstrap-select.show>.dropdown-menu>.dropdown-menu {
+  display: block;
+}
+
+.bootstrap-select>.dropdown-menu>.dropdown-menu li.hidden {
+  display: none;
+}
+
+.bootstrap-select>.dropdown-menu>.dropdown-menu li a {
+  display: block;
+  width: 100%;
+  padding: 3px 1.5rem;
+  clear: both;
+  font-weight: 400;
+  color: #292b2c;
+  text-align: inherit;
+  white-space: nowrap;
+  background: 0 0;
+  border: 0;
+}
+
+

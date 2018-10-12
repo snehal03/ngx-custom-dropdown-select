@@ -1,0 +1,33 @@
+<div class="col">
+  <div class="row">
+    <div class="form-control" style="border:none; padding:0;">
+      <button type="button" [disabled]="disableFlag" type="button" (click)="toggleDropdwon()" class=" btn mb-0 dropdown-toggle btn-default buttonClass font-small-3"
+        data-toggle="dropdown" data-id="select-country" title="{{value}}" aria-expanded="false" style="font-weight:500; text-align:left;   height: inherit;">
+        <span class=" filter-option pull-left buttonSpan" style="text-overflow: ellipsis;width: 130px; white-space: nowrap;overflow: hidden;    text-align: left;">
+          {{ value !== '' && value !== undefined ? value: placeHolder}}</span>&nbsp;
+        <span class="bs-caret">
+          <span class="caret"></span>
+        </span>
+      </button>
+
+      <div class="dropdown-menu open divUl" x-placement="bottom-start">
+        <div class="bs-searchbox divUl1">
+          <input type="text" (keyup)="searchChanged()" [(ngModel)]="searchText" class="form-control searchInput" autocomplete="off">
+
+          <ul class="dropdown-menu ulClass" role="menu">
+            <li *ngFor="let d of dataList  ;let i = index" (click)="valueSelected(i, d.id)" data-original-index="i" [ngClass]="  {'active':selectedId == i }"
+              class="selected activeClass liClass">
+              <a tabindex="0" data-tokens="null">
+                <span class="text ellipsis " title="{{d.name}}" style="color:#000 ">{{d.name}}</span>
+                <span class="glyphicon glyphicon-ok check-mark"></span>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
